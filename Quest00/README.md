@@ -31,20 +31,22 @@
   
 
 * git의 clone/add/commit/push/pull/branch/stash 명령은 무엇이며 어떨 때 이용하나요? 그리고 어떻게 사용하나요?
-  > - git clone: 다른 사람의 레포지토리를 내 로컬로 저장함
-  > - git add: 현재 작업하고 있는 소스코드를 로컬 스테이지에서 깃이 읽을 수 있게 올림
-  > - git commit: 로컬 스테이지에 올라갈 준비가 된, add된 상태의 소스코드를 로컬스테이지로 올림
-  > - git push: 로컬 스테이지에 있는 소스코드를 원격 스테이지로 올림
-  > - git pull: 원격 스테이지에 있는 소스코드를 로컬로 내려받음
-  > - git branch: 로컬에 브랜치를 생성함
-  > - git stash: 아직 마무리되지 않은 작업을 잠시 스택에 저장함. 현재 작성한 변경사항을 저장함  
-  > - git stash / git stash save [stash message]: 현재 내용 저장
-    > - git stash list: list 보기
-    > - git stash apply: 가장 최근 stash 파일 불러옴
-    > - git stash [stash name]:  stash name의 stash를 불러옴 
-    > - git stash drop: 가장 최근 stash를 스택에서 지움
-    > - git stash drop [stash name]: stash name의 stash를 지움
-    > - git stash branch [branch name] [stash name]: stash name의 stash로 새로운 브랜치를 만들고 해당 stash는 삭제함
+  > - `git clone`: 다른 사람의 레포지토리를 내 로컬로 저장함
+  > - `git add`: 현재 작업하고 있는 소스코드를 로컬 스테이지에서 깃이 읽을 수 있게 올림
+  > - `git commit`: 로컬 스테이지에 올라갈 준비가 된, add된 상태의 소스코드를 로컬스테이지로 올림
+  > - `git push`: 로컬 스테이지에 있는 소스코드를 원격 스테이지로 올림
+  > - `git pull`: 원격 스테이지에 있는 소스코드를 로컬로 내려받음
+  > - `git branch`: 로컬에 브랜치를 생성함
+    > - `git stash`: 아직 마무리되지 않은 작업을 잠시 스택에 저장함. 현재 작성한 변경사항을 저장함  
+    > - `git stash / git stash save [stash message]`: 현재 내용 저장
+    > - `git stash list`: list 보기
+    > - `git stash apply`: 가장 최근 stash 파일 불러옴
+    > - `git stash [stash name]`:  stash name의 stash를 불러옴 
+    > - `git stash drop`: 가장 최근 stash를 스택에서 지움
+    > - `git stash drop [stash name]`: stash name의 stash를 지움
+    > - `git stash apply -p | git apply -R`: 적용된 stash를 되돌림
+    > - `git stash show -p [stash name] | git apply -R`: 적용된 stash를 되돌림 (특정 stash name 지정)
+    > - `git stash branch [branch name] [stash name]`: stash name의 stash로 새로운 브랜치를 만들고 해당 stash는 삭제함
 
 * git의 Object, Commit, Head, Branch, Tag는 어떤 개념일까요? git 시스템은 프로젝트의 히스토리를 어떻게 저장할까요?
   > [참고 블로그](https://sjh836.tistory.com/37)
